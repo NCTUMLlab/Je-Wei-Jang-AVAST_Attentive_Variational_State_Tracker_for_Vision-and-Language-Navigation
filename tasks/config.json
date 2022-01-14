@@ -1,0 +1,95 @@
+{
+    "r2r_env": {
+        "mp": {
+            "image_w": 800,
+            "image_h": 600,
+            "vfov": 60,
+            "training_parallel": 256,
+            "evaluate_parallel": 1024,
+            "connectivity": "/root/mount/Matterport3DSimulator/connectivity/",
+            "skybox_dir": "/root/mount/Matterport3DSimulator/data/v1/scans/"
+        },
+        "word_embedding": "/root/mount/Matterport3DSimulator/tasks/env/nlp_features/glove.6B.300d",
+        "word_embedding_size": 300,
+        "pano_feature": "/root/mount/Matterport3DSimulator/tasks/env/img_features/ResNet-152-imagenet",
+        "pano_space": 36,
+        "pano_feature_size": 2048,
+        "pose_repeat": 32,
+        "pose_space": 4,
+        "adj_dict_file": "/root/mount/Matterport3DSimulator/tasks/env/adj_dict/total_adj_dict.json",
+        "dataset_dir": "/root/mount/Matterport3DSimulator/tasks/env/r2r_dataset/",
+        "expert_dir": "/root/mount/Matterport3DSimulator/tasks/env/expert/expert.tsv",
+        "max_iteration": 10,
+        "success_radius": 3,
+        "action_space": 14,
+        "finish_action_idx": 0,
+        "skip_action_idx": -1,
+        "reward_mode": {
+            "//shaping": ["goal", "fidelity"],
+            "shaping": "goal",
+            "scale": 1
+        }
+    },
+    "agent": {
+        "train": {
+            "replay_memory": {
+                "max_epi_num": 100000,
+                "min_epi_num": 0,
+                "max_epi_len": 10,
+                "demonstration":{
+                    "curriculum_progress": 10,
+                    "last_lecture": 7,
+                    "ratio": 0.2
+                }
+            },
+            "learning": {
+                "dropout_ratio": 0,
+                "gamma": 0.95,
+                "iteration": 20000,
+                "batch_size": 256,
+                "lr": 1e-5,
+                "log_alpha_init": -3,
+                "ema": 0.995,
+                "target_replace_iteration": 1,
+                "target_entropy_ratio": 0.05
+            }
+        },
+        "pre_train": {
+            "learning": {
+                "dropout_ratio": 0.5,
+                "gamma": 0.95,
+                "iteration": 10000,
+                "lr": 1e-4
+            }
+        }
+    },
+    "state_tracker": {
+        "dropout_ratio": 0.5,
+        "obs": {
+            "instr": {
+                "lstm": {
+                    "hidden_dim": 512,
+                    "num_layers": 1,
+                    "bidirectional": false
+                }
+            },
+            "vision": {
+                "attn": {
+                    "query_dim": 512
+                }
+            }
+        },
+        "ast": {
+            "hidden_dim": 512,
+            "num_layers": 1
+        },
+        "avast": {
+            "hidden_dim": 512,
+            "num_layers": 1,
+            "latent_dim": 64
+        }
+    },
+    "result_dir": "/root/mount/Matterport3DSimulator/tasks/data/results/0/",
+    "save_dir": "/root/mount/Matterport3DSimulator/tasks/data/save_weight/",
+    "device": "cuda:0"
+}

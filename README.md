@@ -14,7 +14,7 @@ cd AVAST_R2R
 
 ### Downloading pre-trained embedding and R2R datasets
 ```bash
-cd Matterport3DSimulator
+cd AVAST_R2R
 bash download.sh
 ```
 

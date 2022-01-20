@@ -14,7 +14,6 @@ cd AVAST_R2R
 
 ### Downloading pre-trained embedding and R2R datasets
 ```bash
-cd AVAST_R2R
 bash download.sh
 ```
 
@@ -47,10 +46,11 @@ cmake -DEGL_RENDERING=ON ..
 make
 cd ../
 echo export PYTHONPATH=$PYTHONPATH:/root/mount/AVAST_R2R/build >> ~/.bashrc
+source ~/.bashrc
 ```
 
 ### Buiding Lookup Table for Location Connectivity
-Now (from inside the docker container), build the simulator code:
+Now (from inside the docker container), build lookup table for location connectvity:
 ```bash
 python3 tasks/data/scripts/generate_adj_dict.py > ./tasks/env/adj_dict/total_adj_dict.json
 ```
@@ -58,6 +58,9 @@ python3 tasks/data/scripts/generate_adj_dict.py > ./tasks/env/adj_dict/total_adj
 ---
 
 ## Training and evaluation
+```
+cd tasks
+```
 
 ### Pre-training state trackers
 * Pre-training attentive state tracker:

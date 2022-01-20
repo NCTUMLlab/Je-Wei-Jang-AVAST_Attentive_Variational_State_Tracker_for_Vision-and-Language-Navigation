@@ -46,6 +46,7 @@ mkdir build && cd build
 cmake -DEGL_RENDERING=ON ..
 make
 cd ../
+echo export PYTHONPATH=$PYTHONPATH:/root/mount/AVAST_R2R/build >> ~/.bashrc
 ```
 
 ### Buiding Lookup Table for Location Connectivity

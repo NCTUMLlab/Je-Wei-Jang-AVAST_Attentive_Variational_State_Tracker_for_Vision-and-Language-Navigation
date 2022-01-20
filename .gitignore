@@ -2,7 +2,6 @@
 /data
 /build
 /doxygen
-*.tsv
 /sim_imgs
 *.so
 *kdev4*
@@ -11,5 +10,3 @@
 *.pyc
 *.out
 *.zip
-/tasks/R2R/data/*.json
-/tasks/R2R/data/*_vocab.txt

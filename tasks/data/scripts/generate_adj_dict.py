@@ -11,8 +11,8 @@ Location = namedtuple(
     ["vp_id", "abs_heading", "abs_elevation", "view_index", "rel_heading", "rel_elevation", "forward"]
 )
 rad30 = np.deg2rad(30)
-skybox_dir = '/root/mount/Matterport3DSimulator/data/v1/scans/'
-connectivity_dir = '/root/mount/Matterport3DSimulator/connectivity/'
+skybox_dir = '/root/mount/AVAST_R2R/data/v1/scans/'
+connectivity_dir = '/root/mount/AVAST_R2R/connectivity/'
 
 
 def absolutize_rad(

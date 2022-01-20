@@ -6,19 +6,19 @@
             "vfov": 60,
             "training_parallel": 256,
             "evaluate_parallel": 1024,
-            "connectivity": "/root/mount/Matterport3DSimulator/connectivity/",
-            "skybox_dir": "/root/mount/Matterport3DSimulator/data/v1/scans/"
+            "connectivity": "/root/mount/AVAST_R2R/connectivity/",
+            "skybox_dir": "/root/mount/AVAST_R2R/data/v1/scans/"
         },
-        "word_embedding": "/root/mount/Matterport3DSimulator/tasks/env/nlp_features/glove.6B.300d",
+        "word_embedding": "/root/mount/AVAST_R2R/tasks/env/nlp_features/glove.6B.300d",
         "word_embedding_size": 300,
-        "pano_feature": "/root/mount/Matterport3DSimulator/tasks/env/img_features/ResNet-152-imagenet",
+        "pano_feature": "/root/mount/AVAST_R2R/tasks/env/img_features/ResNet-152-imagenet",
         "pano_space": 36,
         "pano_feature_size": 2048,
         "pose_repeat": 32,
         "pose_space": 4,
-        "adj_dict_file": "/root/mount/Matterport3DSimulator/tasks/env/adj_dict/total_adj_dict.json",
-        "dataset_dir": "/root/mount/Matterport3DSimulator/tasks/env/r2r_dataset/",
-        "expert_dir": "/root/mount/Matterport3DSimulator/tasks/env/expert/expert.tsv",
+        "adj_dict_file": "/root/mount/AVAST_R2R/tasks/env/adj_dict/total_adj_dict.json",
+        "dataset_dir": "/root/mount/AVAST_R2R/tasks/env/r2r_dataset/",
+        "expert_dir": "/root/mount/AVAST_R2R/tasks/env/expert/expert.tsv",
         "max_iteration": 10,
         "success_radius": 3,
         "action_space": 14,
@@ -89,7 +89,7 @@
             "latent_dim": 64
         }
     },
-    "result_dir": "/root/mount/Matterport3DSimulator/tasks/data/results/0/",
-    "save_dir": "/root/mount/Matterport3DSimulator/tasks/data/save_weight/",
+    "result_dir": "/root/mount/AVAST_R2R/tasks/data/results/0/",
+    "save_dir": "/root/mount/AVAST_R2R/tasks/data/save_weight/",
     "device": "cuda:0"
 }

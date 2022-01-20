@@ -273,7 +273,7 @@ def train_test(
 
 def main():
     # load args, config
-    config = load_config('/root/mount/Matterport3DSimulator/tasks/config.json')
+    config = load_config('/root/mount/AVAST_R2R/tasks/config.json')
     assert config['args']['agent'] == 'seq2seq'
 
     # select mode

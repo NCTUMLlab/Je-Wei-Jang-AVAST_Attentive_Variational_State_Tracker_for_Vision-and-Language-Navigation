@@ -13,4 +13,4 @@ unzip tasks/env/img_features/ResNet-152-imagenet.zip -d tasks/env/img_features/
 
 # glove
 wget https://nlp.stanford.edu/data/glove.6B.zip -P tasks/env/nlp_features/
-unzip -j tasks/env/nlp_features/glove.6B.zip glove.6B.300d.txt -d tasks/env/env/nlp_features/
+unzip -j tasks/env/nlp_features/glove.6B.zip glove.6B.300d.txt -d tasks/env/nlp_features/

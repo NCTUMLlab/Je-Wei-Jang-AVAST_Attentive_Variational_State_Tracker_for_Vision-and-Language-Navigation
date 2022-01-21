@@ -8,7 +8,8 @@ This is the PyTorch implementation for AVAST: Attentive VAriational State Tracke
 
 Clone the AVAST_R2R repository:
 ```bash
-git clone --recursive https://github.com/weber12599/AVAST_R2R.git
+git clone --recursive https://github.com/NCTUMLlab/Je-Wei-Jang-AVAST_Attentive_Variational_State_Tracker_for_Vision-and-Language-Navigation.git
+mv Je-Wei-Jang-AVAST_Attentive_Variational_State_Tracker_for_Vision-and-Language-Navigation AVAST_R2R
 cd AVAST_R2R
 ```
 
